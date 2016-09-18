@@ -3,6 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
+<%@ taglib prefix="sping" uri="http://www.springframework.org/tags" %>
 
 <layout:base title="View/modify account">
     <jsp:attribute name="body">
@@ -14,7 +15,7 @@
 
         <form class="form-horizontal">
             <div class="form-group">
-                <label path="userName" class="col-sm-2 control-label">User name</label>
+                <label path="userName" class="col-sm-2 control-label"><sping:message code="username"/></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" path="userName" placeholder="${account.userName}" disabled/>
                 </div>
