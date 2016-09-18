@@ -1,0 +1,15 @@
+form .text-danger {
+    margin: .25em;
+}
+
+.footer {
+    padding: 2em 0;
+}
+
+h3.panel-title {
+    display: inline-block;
+}
+
+.alert h4 {
+    margin: 0;
+}
