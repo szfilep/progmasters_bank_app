@@ -12,6 +12,8 @@
 <head>
     <title>${title}</title>
     <meta charset="UTF-8" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel='stylesheet' href='<c:url value="/webjars/bootstrap/3.3.6/css/bootstrap.min.css"/>'>
     <link href="<c:url value="/static/css/main.css"/>" rel="stylesheet"/>
 
@@ -47,7 +49,7 @@
 <footer class="footer">
     <div class="container">
         <p class="text-muted">
-            Progmasters Bank &copy; 2016
+            PROGmasters Bank &copy; 2016
             <jsp:invoke fragment="footer" var="footer_content"/>
             <c:choose>
                 <c:when test="${footer_content.length() > 0}">
