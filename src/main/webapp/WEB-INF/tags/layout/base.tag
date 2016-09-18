@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>${title}</title>
+    <meta charset="UTF-8" content="text/html">
     <link rel='stylesheet' href='<c:url value="/webjars/bootstrap/3.3.6/css/bootstrap.min.css"/>'>
     <link href="<c:url value="/static/css/main.css"/>" rel="stylesheet"/>
 
