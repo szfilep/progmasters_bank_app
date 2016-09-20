@@ -4,11 +4,12 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
 
-<layout:base title="List">
+<spring:message code="transfer.title" var="title"/>
+<layout:base title="${title}">
     <jsp:attribute name="body">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Transfer funds</h3>
+                <h3 class="panel-title"><spring:message code="transfer.panel.title"/></h3>
                 <%--<a href="<c:url value="/"/>" class="pull-right">Back to the list</a>--%>
             </div>
 
@@ -17,17 +18,17 @@
                 <c:url var="createTransferURL" value="/transfer/create"/>
                 <form:form modelAttribute="transfer" action="${createTransferURL}" method="post" class="form-horizontal">
                     <div class="form-group">
-                        <label path="from" class="col-sm-2 control-label">Transfer from</label>
+                        <label path="from" class="col-sm-2 control-label"><spring:message code="transfer.from"/></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" path="from.userName" placeholder="${transfer.from.userName}" disabled="true"/>
                         </div>
                     </div>
                     <form:hidden path="from" value="${transfer.from.id}"/>
                     <div class="form-group">
-                        <label for="to" class="col-sm-2 control-label">Transfer to</label>
+                        <label for="to" class="col-sm-2 control-label"><spring:message code="transfer.to"/></label>
                         <div class="col-sm-10">
                             <select id="to" name="to" class="form-control">
-                                <option value="-1">--- Select account ---</option>
+                                <option value="-1">--- <spring:message code="transfer.select.account"/> ---</option>
                                 <c:forEach var="accTo" items="${accounts}">
                                     <option value="${accTo.id}">${accTo.goalName}</option>
                                 </c:forEach>
@@ -36,14 +37,14 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label path="balance" class="col-sm-2 control-label">My balance</label>
+                        <label path="balance" class="col-sm-2 control-label"><spring:message code="transfer.balance"/></label>
                         <div class="input-group col-sm-4" style="padding-left: 15px;">
                             <input type="text" class="form-control" path="from.balance" placeholder="${transfer.from.balance}" disabled="true"/>
                             <span class="input-group-addon">$</span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <form:label path="amount" class="col-sm-2 control-label">Amount</form:label>
+                        <form:label path="amount" class="col-sm-2 control-label"><spring:message code="transfer.amount"/></form:label>
                         <div class="input-group col-sm-4" style="padding-left: 15px;">
                             <form:input type="text" class="form-control" path="amount" placeholder="0"/>
                             <span class="input-group-addon">$</span>
@@ -57,7 +58,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Transfer</button>
+                            <button type="submit" class="btn btn-default"><spring:message code="transfer.submit"/></button>
                         </div>
                     </div>
                 </form:form>

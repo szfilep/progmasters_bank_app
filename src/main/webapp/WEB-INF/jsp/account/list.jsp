@@ -12,7 +12,7 @@
             </div>
         </c:if>
 
-        <h2>Accounts</h2>
+        <h2><spring:message code="list.accounts"/></h2>
         <c:if test="${not empty accounts}">
             <ul class="list-group">
                 <c:forEach var="acc" items="${accounts}">
@@ -22,7 +22,7 @@
         </c:if>
 
 
-        <h2>Transfers</h2>
+        <h2><spring:message code="list.transfers"/></h2>
         <c:if test="${not empty transfers}">
             <ul class="list-group">
                 <c:forEach var="tr" items="${transfers}">

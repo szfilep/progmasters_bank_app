@@ -102,6 +102,7 @@ public class Transfer {
 
     @Override
     public String toString() {
-        return "Transfer from " + from.getUserName() + " to " + to.getGoalName() + " with amount " + amount + " at " + timeStamp;
+        //return "Transfer from " + from.getUserName() + " to " + to.getGoalName() + " with amount " + amount + " at " + timeStamp;
+        return "Átutalás " + from.getUserName() + " számláról " + to.getGoalName() + " számlára, " + amount + " összeggel " + timeStamp + " időpontban";
     }
 }

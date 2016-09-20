@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = TransferAmountValidator.class)
 public @interface TransferAmount {
 
-    String message() default "Az érték összege 1 és 1000 közé eshet.";
+    String message() default "Az összeg 1 és 1000 közé eshet.";
 
     Class<?>[] groups() default { };
 
