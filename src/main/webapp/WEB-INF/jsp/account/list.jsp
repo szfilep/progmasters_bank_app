@@ -14,9 +14,9 @@
 
         <h2>Accounts</h2>
         <c:if test="${not empty accounts}">
-            <ul>
+            <ul class="list-group">
                 <c:forEach var="acc" items="${accounts}">
-                    <li>${acc}</li>
+                    <li class="list-group-item">${acc}</li>
                 </c:forEach>
             </ul>
         </c:if>
@@ -24,9 +24,9 @@
 
         <h2>Transfers</h2>
         <c:if test="${not empty transfers}">
-            <ul>
+            <ul class="list-group">
                 <c:forEach var="tr" items="${transfers}">
-                    <li>${tr}</li>
+                    <li class="list-group-item">${tr}</li>
                 </c:forEach>
             </ul>
         </c:if>
