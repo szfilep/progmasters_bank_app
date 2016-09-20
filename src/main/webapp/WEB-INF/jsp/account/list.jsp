@@ -3,6 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
+<META HTTP-EQUIV="Refresh" CONTENT="10">
 
 <layout:base title="View/modify account">
     <jsp:attribute name="body">
