@@ -38,6 +38,10 @@ public class AccountService {
         return accountRepository.findAll();
     }
 
+    public List<Account> findAllOrderByFunds() {
+        return accountRepository.findAllByOrderByFundsDesc();
+    }
+
     public Account findMyAccount(String ipAddress) {
         return findByIpAddress(ipAddress);
     }

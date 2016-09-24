@@ -102,7 +102,7 @@ public class AccountController {
     public String accounts(Model model, HttpServletRequest request) {
         logger.info("/account [GET]");
 
-        List<Account> accounts = accountService.findAll();
+        List<Account> accounts = accountService.findAllOrderByFunds();
         model.addAttribute("accounts", accounts);
 
         List<Transfer> transfers = transferService.findAll();
