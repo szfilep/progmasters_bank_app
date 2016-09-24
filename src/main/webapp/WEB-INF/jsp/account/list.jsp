@@ -5,7 +5,8 @@
 <%@ taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
 <META HTTP-EQUIV="Refresh" CONTENT="5">
 
-<layout:base title="View/modify account">
+<spring:message code="list.title" var="title"/>
+<layout:base title="${title}">
     <jsp:attribute name="body">
         <c:if test="${not empty successMessage}">
             <div class="alert alert-success">
