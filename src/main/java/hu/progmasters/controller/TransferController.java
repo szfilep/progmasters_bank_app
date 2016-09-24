@@ -66,7 +66,7 @@ public class TransferController {
 
         if (!model.containsAttribute(MODEL_ATTR_ACCOUNTS)) {
             List<Account> accounts = accountService.findAll();
-//            accounts.remove(myAccount);
+            accounts.remove(myAccount);
             model.addAttribute(MODEL_ATTR_ACCOUNTS, accounts);
         }
 
