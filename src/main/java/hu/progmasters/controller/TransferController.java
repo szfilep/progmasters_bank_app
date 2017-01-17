@@ -87,9 +87,11 @@ public class TransferController {
 
         if (!checkErrorsAndAddToFlashAttributes(MODEL_ATTR_TRANSFER, transfer, bindingResult, redirectAttributes)) {
             transferService.create(transfer);
+            redirectAttributes.addFlashAttribute("successMessage", "Sikeres átutalás.");
 //            serverSentEventsService.sendMessage("Blocking event created (id " + blockingEventEntity.getId() + ")");
-            view = "redirect:/myaccount";
+            view = "redirect:/transfer";
         } else {
+            redirectAttributes.addFlashAttribute("errorMessage", "Hibás adatok.");
             view = "redirect:/transfer";
         }
 

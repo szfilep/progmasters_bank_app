@@ -13,6 +13,12 @@
             </div>
         </c:if>
 
+        <c:if test="${not empty errorMessage}">
+            <div class="alert alert-warning">
+                ${errorMessage}
+            </div>
+        </c:if>
+
         <h2><spring:message code="account.info"/></h2>
         <form class="form-horizontal">
             <div class="form-group">

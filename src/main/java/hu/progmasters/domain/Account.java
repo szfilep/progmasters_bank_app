@@ -126,6 +126,6 @@ public class Account {
 
     @Override
     public String toString() {
-        return goalName + " (" + userName + ")" + " - egyenleg: " + balance + ", támogatás öszege: " + funds;
+        return goalName + " (" + userName + ")" + " - egyenleg: " + balance + ", támogatás összege: " + funds;
     }
 }
