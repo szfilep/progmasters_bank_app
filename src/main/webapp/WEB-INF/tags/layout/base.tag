@@ -49,7 +49,7 @@
 <footer class="footer">
     <div class="container">
         <p class="text-muted">
-            PROGmasters Bank &copy; 2016
+            PROGmasters Bank &copy; 2017
             <jsp:invoke fragment="footer" var="footer_content"/>
             <c:choose>
                 <c:when test="${footer_content.length() > 0}">

@@ -22,6 +22,8 @@ public class TransferService {
     AccountRepository accountRepository;
 
     public Transfer create(Transfer transfer) {
+        //TODO transfer amount from an account to another fund and set datetime
+
         Account from = transfer.getFrom();
         Account to = transfer.getTo();
 
@@ -32,6 +34,7 @@ public class TransferService {
         accountRepository.save(to);
 
         transfer.setTimeStamp(new Date());
+
         return transferRepository.save(transfer);
     }
 
